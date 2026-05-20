@@ -1,0 +1,50 @@
+/* Leaflet CSS — @import must come before @tailwind / other statements */
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  background: #0B0F1A;
+  color: #E5E7EB;
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth dark scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2A2F3A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3A4150; }
+
+/* Leaflet popup dark theme to match the rest of the UI */
+.leaflet-popup-content-wrapper {
+  background: #111827 !important;
+  color: #E5E7EB !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.45) !important;
+}
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  font-family: 'Inter', sans-serif;
+}
+.leaflet-popup-tip {
+  background: #111827 !important;
+}
+.leaflet-popup-close-button {
+  color: #9CA3AF !important;
+}
+
+/* Leaflet zoom controls dark */
+.leaflet-control-zoom a {
+  background: #111827 !important;
+  color: #E5E7EB !important;
+  border-color: #1F2937 !important;
+}
+.leaflet-control-attribution {
+  background: rgba(17, 24, 39, 0.7) !important;
+  color: #9CA3AF !important;
+}
+.leaflet-control-attribution a { color: #FA4616 !important; }
